@@ -10,18 +10,6 @@ const Menu = () => {
     const contentRef = useRef()
 
     useGSAP(() => {
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: '#menu',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: true,
-            }
-        })
-        // .to('#m-left-leaf', { y: -200 }, 0)
-    }, [])
-
-    useGSAP(() => {
         gsap.fromTo('#title', {opacity: 0}, {opacity:1 , duration: 1})
         gsap.fromTo('.cocktail img', {opacity: 0, xPercent: -100}, {
             xPercent: 0, opacity: 1, duration: 1, ease: 'power1.inOut'})
@@ -50,7 +38,7 @@ const Menu = () => {
     <section id='menu' aria-labelledby='menu-heading'>
 
         <img src="/images/hero-right-leaf.png" alt="right-leaf" id='m-right-leaf' />
-        <img src="/images/slider-left-leaf.png" alt="left-leaf" className='object-contain absolute top-170 left-0 md:w-fit w-1/3'/>
+        {/* <img src="/images/slider-left-leaf.png" alt="left-leaf" className='object-contain absolute top-170 left-0 md:w-fit w-1/3'/> */}
 
         <h2 id='menu-heading' className='sr-only'>
             Cocktail Menu
